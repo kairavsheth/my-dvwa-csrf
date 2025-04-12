@@ -1,0 +1,199 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Dashboard</title>-->
+<!--    <style>-->
+<!--        body {-->
+<!--            font-family: Arial, sans-serif;-->
+<!--            line-height: 1.6;-->
+<!--            margin: 0;-->
+<!--            padding: 20px;-->
+<!--            background-color: #f4f4f4;-->
+<!--        }-->
+<!--        .container {-->
+<!--            max-width: 800px;-->
+<!--            margin: auto;-->
+<!--            background: white;-->
+<!--            padding: 20px;-->
+<!--            border-radius: 5px;-->
+<!--            box-shadow: 0 0 10px rgba(0,0,0,0.1);-->
+<!--        }-->
+<!--        h1 {-->
+<!--            color: #333;-->
+<!--        }-->
+<!--        .actions {-->
+<!--            margin-top: 20px;-->
+<!--        }-->
+<!--        .actions a {-->
+<!--            display: inline-block;-->
+<!--            margin-right: 10px;-->
+<!--            padding: 10px 15px;-->
+<!--            background-color: #007bff;-->
+<!--            color: white;-->
+<!--            text-decoration: none;-->
+<!--            border-radius: 3px;-->
+<!--        }-->
+<!--        .actions a:hover {-->
+<!--            background-color: #0056b3;-->
+<!--        }-->
+<!--        .logout-form {-->
+<!--            display: inline-block;-->
+<!--        }-->
+<!--        .logout-button {-->
+<!--            background-color: #dc3545;-->
+<!--            color: white;-->
+<!--            border: none;-->
+<!--            padding: 10px 15px;-->
+<!--            cursor: pointer;-->
+<!--            border-radius: 3px;-->
+<!--        }-->
+<!--        .logout-button:hover {-->
+<!--            background-color: #c82333;-->
+<!--        }-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+<!--<div class="container">-->
+<!--    <h1>Welcome, {{.Username}}!</h1>-->
+<!--    <p>This is your personal dashboard. Here you can manage your account and access various features.</p>-->
+
+<!--    <div class="actions">-->
+<!--        <a href="/change-password">Change Password</a>-->
+<!--        <form class="logout-form" action="/logout" method="POST">-->
+<!--            <button class="logout-button" type="submit">Logout</button>-->
+<!--        </form>-->
+<!--    </div>-->
+<!--</div>-->
+<!--</body>-->
+<!--</html>-->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+
+            background: linear-gradient(to bottom right, #1e3c32, #2a5298); /* Dark gradient */
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+
+
+            .container {
+                width: 100%;
+                max-width: 500px;
+                background: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
+                border-radius: 15px;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+                padding: 30px;
+                text-align: center;
+                box-sizing: border-box;
+            }
+
+            h1 {
+                font-size: 2.2em;
+                color: #f1f1f1;
+                margin-bottom: 20px;
+                font-weight: bold;
+            }
+
+            p {
+                color: #ddd;
+                font-size: 1.1em;
+                margin-bottom: 30px;
+            }
+
+            .actions {
+                margin-top: 20px;
+            }
+
+            .actions a, .logout-form button {
+                display: inline-block;
+                padding: 12px 20px;
+                margin: 10px 0;
+                font-size: 1.1em;
+                border-radius: 50px;
+                transition: all 0.3s ease;
+                text-decoration: none;
+                cursor: pointer;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            .actions a {
+                background: #007bff;
+                color: white;
+            }
+
+            .actions a:hover {
+                background: #0056b3;
+            }
+
+            .logout-button {
+                background-color: #dc3545;
+                color: white;
+                border: none;
+                width: 100%;
+            }
+
+            .logout-button:hover {
+                background-color: #c82333;
+                transform: translateY(-2px);
+            }
+
+            .logout-form {
+                display: inline-block;
+                width: 100%;
+            }
+
+            @media (max-width: 600px) {
+                h1 {
+                    font-size: 1.8em;
+                }
+
+                p {
+                    font-size: 1em;
+                }
+
+                .container {
+                    padding: 20px;
+                    max-width: 90%;
+                }
+
+                .actions a, .logout-form button {
+                    font-size: 1em;
+                }
+            }
+        }
+
+
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Welcome, {{.Username}}!</h1>
+    <p>This is your personal dashboard. Here you can manage your account and access various features.</p>
+
+    <div class="actions">
+        <a href="/change-password">Change Password</a>
+        <form class="logout-form" action="/logout" method="POST">
+            <button class="logout-button" type="submit">Logout</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
