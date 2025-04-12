@@ -10,7 +10,6 @@ import (
 	"os"
 
 	"github.com/gorilla/sessions"
-	"github.com/joho/godotenv"
 	"github.com/labstack/echo/v4/middleware"
 	_ "github.com/lib/pq"
 	"golang.org/x/crypto/bcrypt"
@@ -31,11 +30,6 @@ type User struct {
 var store = sessions.NewCookieStore([]byte("super-secret-key"))
 
 func main() {
-	err := godotenv.Load()
-	if err != nil {
-		log.Fatal("Error loading .env file")
-	}
-
 	db := connectDB()
 	defer func(db *sql.DB) {
 		err := db.Close()
